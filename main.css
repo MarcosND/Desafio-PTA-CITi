@@ -2,12 +2,22 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-html, body {
+html{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     height: 100%;
     width: 100%;
+    overflow: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
 }
 
 #header {
@@ -145,6 +155,7 @@ h2{
     border-radius: 15px;
     display: flex;
     align-items: center;
+    justify-content: center;
     width: 15vw;
     height: 22.2vh;
 }
@@ -156,6 +167,7 @@ h2{
     border-radius: 15px;
     display: flex;
     align-items: center;
+    justify-content: center;
     width: 15vw;
     height: 20vh;
 }
@@ -312,13 +324,13 @@ h2{
     }
 
     .mini-box-top{
-        width: 17.5vw;
+        width: 24vw;
         height: 12vh;
         
     }
     
     .mini-box-bottom{
-        width: 17.5vw;
+        width: 24vw;
         height: 12vh;
         
     }
