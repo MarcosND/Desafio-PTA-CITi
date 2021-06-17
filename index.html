@@ -16,19 +16,35 @@
         <div class="top-left-logo">
             <img class="logo-dd" src="assets/Component 1.svg" alt="logo DOUBLE dip">
         </div>
+         
+        <div class="middle-buttom">
+            <buttom onclick={handleClickBlue} class="buttom-div">
+                <div class="buttom"  id="blue"></div>
+                <img class="buttom-img" id="blue-img" src="assets/ice-cream-blue.svg" alt="botão com sorvete azul">
+            </buttom>
+            <buttom onclick={handleClickPink} class="buttom-div">
+                <div class="buttom" id="pink"></div>
+                <img class="buttom-img" id="pink-img" src="assets/ice-cream-pink.svg" alt="botão com sorvete rosa">
+            </buttom>
+            <buttom onclick={handleClickOrange} class="buttom-div">
+                <div class="buttom" id="orange"></div>
+                <img class="buttom-img" id="orange-img"src="assets/ice-cream-orange.svg" alt="botão com sorvete laranja">
+            </buttom>
+        </div>
 
         <div class="search-bar">
-            <input class="search-input" type="text" placeholder="Procure seu sorvete">
+            <input class="search-input" type="text" placeholder="Procure seu sorvete" name="filter">
+            <input class="search-input-mobile"  type="text" name="filter">
             <img class="search-icon" src="assets/lupa.svg" alt="lupinha">
         </div>
+
     </div>
     </header>
 
     <main id="main">
 
         <section class="content-box" id="box-one">
-            <div class="big-box">
-                
+            <div class="big-box" id="tablito" name="picole">
                 <img class="big-img" src="assets/tablito.svg" alt="tablito">
                 <div class="box-text">
                 <h2>Picolé Tablito</h2>
@@ -37,18 +53,18 @@
                 </div>
             </div>
             
-            <div class="mini-box-top">
+            <div class="mini-box-top" id="brigadeiro" name="picole">
                 <img class="small-img" src="assets/brigadeiro.svg" alt="brigadeiro">
             </div>
 
-            <div class="mini-box-bottom">
+            <div class="mini-box-bottom" id="roxinho" name="picole">
                 <img class="small-img" src="assets/picole3.svg" alt="roxinho">
             </div>
             
         </section>
 
         <section class="content-box" id="box-two">
-            <div class="big-box">
+            <div class="big-box" id="ChicaBon" name="picole">
                 <img class="big-img" src="assets/chicabon.svg" alt="chicabon">
                 <div class="box-text">
                 <h2>Chica Bon</h2>
@@ -57,11 +73,11 @@
                 </div>
             </div>
         
-            <div class="mini-box-top">
+            <div class="mini-box-top" id="kibonbon" name="picole">
                 <img class="small-img" src="assets/kibonbon.svg" alt="kibonbon">
             </div>
 
-            <div class="mini-box-bottom">
+            <div class="mini-box-bottom" id="minions" name="picole">
                 <img class="small-img" src="assets/minions.svg" alt="minions">
             </div>
         
@@ -100,4 +116,5 @@
 
     </footer>
 </body>
+<script type="text/javascript" src="script.js"></script>
 </html>
