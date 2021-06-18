@@ -2,8 +2,6 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-/*mudar media query mobile*/
-
 html{
     margin: 0;
     padding: 0;
@@ -24,11 +22,11 @@ body {
     overscroll-behavior: none;
 }
 
-#header {
+.header {
     width: 100%;
     height: 23%;
-    background: linear-gradient(180deg, #FF99C4 44.17%, rgba(255, 255, 255, 0.12) 100%);
     box-sizing: border-box;
+    background: linear-gradient(180deg, #FF99C4 44.17%, rgba(255, 255, 255, 0.12) 100%);
 }
 
 .header-div{
@@ -36,6 +34,7 @@ body {
     box-sizing: border-box;
     justify-content: space-between;
     padding: 3.9vh 3vw 0vh 3vw;
+    
 }
 
 .search-bar{
@@ -238,7 +237,7 @@ h2{
 }
 
 
-#footer{
+.footer{
     height: 23%;
     width: 100%;
     background: rgba(244, 155, 140, 0.56);

@@ -1,6 +1,6 @@
 let buttom = window.document.querySelectorAll('buttom');
 let searchbar = window.document.getElementsByClassName('search-bar');
-let header = window.document.getElementById('header');
+let header = window.document.querySelector('header');
 let footer = window.document.querySelector('footer');
 let searchinput = window.document.getElementsByClassName('search-input-mobile')
 let searchbarimg = window.document.getElementsByClassName('search-icon')
@@ -8,26 +8,34 @@ let active = "null";
 const searchtext = window.document.getElementsByName('filter')
 const items = window.document.getElementsByName('picole')
 
+// troca de cores e animação do picolé subindo
+// não consegui aplicar a transição no linear gradiant :/
+
 const handleClickBlue = () => {
 
     header.style.background="linear-gradient(180deg, rgba(81, 111, 251, 0.8) 44.17%, rgba(255, 255, 255, 0.12) 100%)"
+    header.style.transition = "all 0.5s";
     footer.style.background="rgba(81, 111, 251, 0.56)"
-    console.log(header)
-    header.classList.add("test")
+    footer.style.transition = "all 0.5s";
+    
     active = "blue-img";
     startAnimation(active)
 }
 
 const handleClickPink = () => {
     header.style.background="linear-gradient(180deg, #FF99C4 44.17%, rgba(255, 255, 255, 0.12) 100%)"
+    header.style.transition = "all 0.5";
     footer.style.background="rgba(244, 155, 140, 0.56)"
+    footer.style.transition = "all 0.5s";
     active = "pink-img";
     startAnimation(active)
 }
 
 const handleClickOrange = () => {
     header.style.background="linear-gradient(180deg, rgba(240, 94, 43, 0.8) 44.17%, rgba(255, 255, 255, 0.12) 100%)"
+    header.style.transition = "all 0.5s";
     footer.style.background="rgba(240, 94, 43, 0.56)"
+    footer.style.transition = "all 0.5s";
     active = "orange-img";
     startAnimation(active)
 }
@@ -43,10 +51,12 @@ const handleClickSearchInput = () =>{
     searchbar[0].classList.add("search-bar-schrink")
 }
 
+// pesquisa
+
 const handleKeyUp = (event) =>{
     const type = event.target.value.toLowerCase().replace(/\s+/g, '')
     items.forEach((item) =>{
-        item.id.toLowerCase().startsWith(type)
+        item.id.toLowerCase().includes(type)
         ? (item.style.display = "flex")
         : (item.style.display = "none")
     })
@@ -60,6 +70,9 @@ searchinput[0].addEventListener("focusout", handleClickSearchInput);
 searchtext[0].addEventListener("keyup", handleKeyUp)
 searchtext[1].addEventListener("keyup", handleKeyUp)
  
+
+// Função da animação do picolé subindo 
+
 function startAnimation (state) {
     if (state === "blue-img"){
         reverseAnimation("pink-img")
